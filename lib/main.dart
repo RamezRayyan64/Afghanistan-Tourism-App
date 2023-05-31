@@ -1,4 +1,5 @@
-import 'package:afghanistan_tourism_app/screens/splash_screen/splash_screen.dart';
+import 'package:afghanistan_tourism_app/screens/initial_screens/loading_screen/loading_screen.dart';
+import 'package:afghanistan_tourism_app/screens/initial_screens/splash_screen/splash_screen.dart';
 import 'package:afghanistan_tourism_app/utilities/theme/dark_theme.dart';
 import 'package:afghanistan_tourism_app/utilities/theme/light_theme.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: SplashScreen.id,
       routes: {
         SplashScreen.id: (context) => const SplashScreen(),
+        LoadingScreen.id: (context) => const LoadingScreen(),
       },
     );
   }

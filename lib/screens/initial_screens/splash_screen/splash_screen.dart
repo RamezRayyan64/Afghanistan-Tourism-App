@@ -1,4 +1,5 @@
 import 'package:afghanistan_tourism_app/constants/images.dart';
+import 'package:afghanistan_tourism_app/screens/initial_screens/loading_screen/loading_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -41,7 +42,8 @@ class SplashScreen extends StatelessWidget {
 
   void goToNextScreen(BuildContext context) async {
     Future.delayed(const Duration(seconds: 3), () {
-      //Go to next screen
+      Navigator.pushNamedAndRemoveUntil(
+          context, LoadingScreen.id, (route) => false);
     });
   }
 }
