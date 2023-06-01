@@ -1,4 +1,5 @@
 import 'package:afghanistan_tourism_app/helper/functions.dart';
+import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/sub_screens/drawer_screens/touristic_cities_screen/touristic_cities_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainHomeScreen extends StatefulWidget {
@@ -13,7 +14,9 @@ class MainHomeScreen extends StatefulWidget {
 class _MainHomeScreenState extends State<MainHomeScreen> {
   int currentDrawerIndex = 0;
   bool isAppExited = false;
-  List drawerScreens = [];
+  List drawerScreens = [
+    const TouristicCitiesScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {

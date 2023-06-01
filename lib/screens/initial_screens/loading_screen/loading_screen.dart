@@ -1,3 +1,4 @@
+import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/main_home_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoadingScreen extends StatelessWidget {
@@ -19,7 +20,8 @@ class LoadingScreen extends StatelessWidget {
 
   void goToNextScreen(BuildContext context) {
     Future.delayed(const Duration(seconds: 3), () {
-      //Go to main screen
+      Navigator.pushNamedAndRemoveUntil(
+          context, MainHomeScreen.id, (route) => false);
     });
   }
 }

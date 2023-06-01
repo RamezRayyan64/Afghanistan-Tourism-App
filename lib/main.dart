@@ -1,3 +1,4 @@
+import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/main_home_screen.dart';
 import 'package:afghanistan_tourism_app/screens/initial_screens/loading_screen/loading_screen.dart';
 import 'package:afghanistan_tourism_app/screens/initial_screens/splash_screen/splash_screen.dart';
 import 'package:afghanistan_tourism_app/utilities/theme/dark_theme.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashScreen.id: (context) => const SplashScreen(),
         LoadingScreen.id: (context) => const LoadingScreen(),
+        MainHomeScreen.id: (context) => const MainHomeScreen(),
       },
     );
   }
