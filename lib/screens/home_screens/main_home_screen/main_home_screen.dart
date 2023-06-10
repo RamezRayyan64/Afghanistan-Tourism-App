@@ -1,8 +1,11 @@
+import 'package:afghanistan_tourism_app/constants/lists.dart';
 import 'package:afghanistan_tourism_app/helper/functions.dart';
 import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/sub_screens/drawer_screens/exchange_rates_screen/exchange_rates_screen.dart';
 import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/sub_screens/drawer_screens/touristic_cities_screen/touristic_cities_screen.dart';
 import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/sub_screens/drawer_screens/widgets/drawer_widgets/custom_drawer_widget.dart';
 import 'package:flutter/material.dart';
+
+import 'sub_screens/drawer_screens/references_screen/references_screen.dart';
 
 class MainHomeScreen extends StatefulWidget {
   const MainHomeScreen({super.key});
@@ -19,6 +22,9 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
   List drawerScreens = [
     const TouristicCitiesScreen(),
     const ExchangeRatesScreen(),
+    ReferencesScreen(
+      referencesItemsList: referencesItemsList,
+    ),
   ];
 
   @override
