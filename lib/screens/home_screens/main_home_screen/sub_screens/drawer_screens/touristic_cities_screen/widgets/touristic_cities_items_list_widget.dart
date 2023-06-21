@@ -1,3 +1,5 @@
+import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/sub_screens/touristic_city_about_screen/touristic_city_detail_screen.dart';
+import 'package:bouncing_widget/bouncing_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -20,8 +22,13 @@ class TouristicCitiesItemsListWidget extends StatelessWidget {
         children: List.generate(
           touristicCitiesList.length,
           (index) {
-            return GestureDetector(
-              onTap: () {},
+            return BouncingWidget(
+              onPressed: () {
+                Navigator.pushNamed(context, TouristicCityDetailScreen.id,
+                    arguments: {
+                      'touristic_city_name': touristicCitiesList[index]
+                    });
+              },
               child: Card(
                 color: Theme.of(context).colorScheme.primary,
                 shape: RoundedRectangleBorder(

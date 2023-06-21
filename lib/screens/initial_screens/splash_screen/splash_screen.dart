@@ -1,5 +1,7 @@
 import 'package:afghanistan_tourism_app/constants/images.dart';
 import 'package:afghanistan_tourism_app/screens/initial_screens/loading_screen/loading_screen.dart';
+import 'package:afghanistan_tourism_app/translations/locale_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -18,7 +20,7 @@ class SplashScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
-                'Welcome To Afghanistan Tourism App',
+                LocaleKeys.welcome_splash.tr(),
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
@@ -29,7 +31,7 @@ class SplashScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
-                'Travel Now',
+                LocaleKeys.travel_now.tr(),
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headlineSmall,
               ),

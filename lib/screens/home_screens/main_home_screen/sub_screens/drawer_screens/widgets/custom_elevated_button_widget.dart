@@ -1,3 +1,5 @@
+import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:afghanistan_tourism_app/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomElevatedButtonWidget extends StatelessWidget {
@@ -20,11 +22,19 @@ class CustomElevatedButtonWidget extends StatelessWidget {
           onPressed: onPressed,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-            child: Text(
-              text,
-              style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    color: Colors.white,
-                  ),
+            child: FutureBuilder(
+              future: AdaptiveTheme.getThemeMode(),
+              builder: (context, snapshot) {
+                return Text(
+                  text,
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        color: MediaQuery.of(context).platformBrightness ==
+                                Brightness.dark
+                            ? kTextColorDark
+                            : Colors.white,
+                      ),
+                );
+              },
             ),
           ),
         ),
