@@ -21,9 +21,9 @@ class TouristicCityAboutDetailWidget extends StatelessWidget {
   final String type;
   final String? text;
   final int? maxLine;
-  final List<String>? galleriesList;
-  final List<Map<String, dynamic>>? notablePeopleList;
-  final List<Map<String, dynamic>>? districtsList;
+  final List? galleriesList;
+  final List? notablePeopleList;
+  final List? districtsList;
 
   @override
   Widget build(BuildContext context) {

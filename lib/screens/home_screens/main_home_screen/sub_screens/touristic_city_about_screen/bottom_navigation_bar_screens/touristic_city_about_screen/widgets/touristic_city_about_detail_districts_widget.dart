@@ -7,7 +7,7 @@ class TouristicCityAboutDetailDistrictsWidget extends StatelessWidget {
     required this.districtsList,
   });
 
-  final List<Map<String, dynamic>>? districtsList;
+  final List? districtsList;
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +36,9 @@ class TouristicCityAboutDetailDistrictsWidget extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             child: Image(
                               height: 100,
-                              image: AssetImage(
-                                districtsList![index]['image'],
+                              image: NetworkImage(
+                                districtsList![index]
+                                    ['touristicCityHomeDistrictImage'],
                               ),
                             ),
                           ),
@@ -58,7 +59,8 @@ class TouristicCityAboutDetailDistrictsWidget extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.only(left: 5),
                                     child: Text(
-                                      districtsList![index]['name'],
+                                      districtsList![index]
+                                          ['touristicCityHomeDistrictName'],
                                       style: Theme.of(context)
                                           .textTheme
                                           .titleSmall,
@@ -80,7 +82,7 @@ class TouristicCityAboutDetailDistrictsWidget extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.only(left: 5),
                                     child: Text(
-                                      '${districtsList![index]['population']}',
+                                      '${districtsList![index]['touristicCityHomeDistrictPopulationAmount']}',
                                       style: Theme.of(context)
                                           .textTheme
                                           .titleSmall,

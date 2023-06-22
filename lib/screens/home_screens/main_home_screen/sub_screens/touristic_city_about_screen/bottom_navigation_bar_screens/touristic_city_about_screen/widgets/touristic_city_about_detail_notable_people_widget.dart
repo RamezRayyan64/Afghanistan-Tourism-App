@@ -7,7 +7,7 @@ class TouristicCityAboutDetailNotablePeopleWidget extends StatelessWidget {
     required this.notablePeopleList,
   });
 
-  final List<Map<String, dynamic>>? notablePeopleList;
+  final List? notablePeopleList;
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +41,9 @@ class TouristicCityAboutDetailNotablePeopleWidget extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10),
                               child: CircleAvatar(
                                 radius: 35,
-                                backgroundImage: AssetImage(
-                                  notablePeopleList![index]['image'],
+                                backgroundImage: NetworkImage(
+                                  notablePeopleList![index]
+                                      ['touristicCityHomeNotablePeopleImage'],
                                 ),
                               ),
                             ),
@@ -50,7 +51,8 @@ class TouristicCityAboutDetailNotablePeopleWidget extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              notablePeopleList![index]['name'],
+                              notablePeopleList![index]
+                                  ['touristicCityHomeNotablePeopleName'],
                               style: Theme.of(context).textTheme.titleMedium,
                             ),
                           ],

@@ -1,5 +1,7 @@
+import 'package:afghanistan_tourism_app/constants/constants.dart';
 import 'package:afghanistan_tourism_app/constants/lists.dart';
 import 'package:afghanistan_tourism_app/helper/functions.dart';
+import 'package:afghanistan_tourism_app/packages/firebase/realtime_database/realtime_database.dart';
 import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/sub_screens/touristic_city_about_screen/bottom_navigation_bar_screens/touristic_city_about_screen/touristic_city_about_screen.dart';
 import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/sub_screens/touristic_city_about_screen/bottom_navigation_bar_screens/touristic_city_festivals_screen/touristic_city_festivals_screen.dart';
 import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/sub_screens/touristic_city_about_screen/bottom_navigation_bar_screens/touristic_city_industries_screen/touristic_city_industries_screen.dart';
@@ -21,13 +23,16 @@ class TouristicCityDetailScreen extends StatefulWidget {
 }
 
 class _TouristicCityDetailScreenState extends State<TouristicCityDetailScreen> {
-  String touristicCityName = '';
-  dynamic arguments = {};
   int currentBNBIndex = 0;
 
   @override
+  void initState() {
+    super.initState();
+    getTouristicCityAbout(touristicCitiesList[touristicCityIndex]);
+  }
+
+  @override
   Widget build(BuildContext context) {
-    getArguments(context);
     List bottomNavigationBarScreen = [
       const TouristicCityAboutScreen(),
       TouristicCityPlacesScreen(
@@ -45,7 +50,8 @@ class _TouristicCityDetailScreenState extends State<TouristicCityDetailScreen> {
     ];
     return Scaffold(
       appBar: appBarWithTitle(
-          title: LocaleKeys.province_name.tr(args: [touristicCityName])),
+          title: LocaleKeys.province_name
+              .tr(args: [touristicCitiesList[touristicCityIndex]])),
       body: bottomNavigationBarScreen[currentBNBIndex],
       bottomNavigationBar: CustomBottomNavigationBarWidget(
         currentBNBIndex: currentBNBIndex,
@@ -56,10 +62,5 @@ class _TouristicCityDetailScreenState extends State<TouristicCityDetailScreen> {
         },
       ),
     );
-  }
-
-  void getArguments(BuildContext context) {
-    arguments = ModalRoute.of(context)!.settings.arguments;
-    touristicCityName = arguments['touristic_city_name'];
   }
 }

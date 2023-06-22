@@ -1,4 +1,3 @@
-import 'package:bouncing_widget/bouncing_widget.dart';
 import 'package:flutter/material.dart';
 
 class TouristicCityAboutDetailGallariesWidget extends StatelessWidget {
@@ -7,7 +6,7 @@ class TouristicCityAboutDetailGallariesWidget extends StatelessWidget {
     required this.galleriesList,
   });
 
-  final List<String>? galleriesList;
+  final List? galleriesList;
 
   @override
   Widget build(BuildContext context) {
@@ -20,19 +19,16 @@ class TouristicCityAboutDetailGallariesWidget extends StatelessWidget {
             children: List.generate(
               galleriesList!.length,
               (index) {
-                return BouncingWidget(
-                  onPressed: () {},
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: 15,
-                        right: index == galleriesList!.length - 1 ? 15 : 0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image(
-                        height: 125,
-                        image: AssetImage(
-                          galleriesList![index],
-                        ),
+                return Padding(
+                  padding: EdgeInsets.only(
+                      left: 15,
+                      right: index == galleriesList!.length - 1 ? 15 : 0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image(
+                      height: 125,
+                      image: NetworkImage(
+                        galleriesList![index]['touristicCityHomeGalleryImage'],
                       ),
                     ),
                   ),

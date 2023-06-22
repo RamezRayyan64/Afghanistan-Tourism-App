@@ -5,7 +5,7 @@ class TouristicCityIndustriesScreen extends StatelessWidget {
   const TouristicCityIndustriesScreen(
       {super.key, required this.touristicCityIndustryItemsList});
 
-  final List<Map<String, dynamic>> touristicCityIndustryItemsList;
+  final List touristicCityIndustryItemsList;
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +14,16 @@ class TouristicCityIndustriesScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: List.generate(touristicCityIndustryItemsList.length, (index) {
-          return TouristicCityItemWidget(
-            imageUrl: touristicCityIndustryItemsList[index]['image_url'],
-            name: touristicCityIndustryItemsList[index]['name'],
-            description: touristicCityIndustryItemsList[index]['description'],
-          );
+          return touristicCityIndustryItemsList[index] == null
+              ? const SizedBox()
+              : TouristicCityItemWidget(
+                  imageUrl: touristicCityIndustryItemsList[index]
+                      ['touristicCityIndustryImage'],
+                  name: touristicCityIndustryItemsList[index]
+                      ['touristicCityIndustryName'],
+                  description: touristicCityIndustryItemsList[index]
+                      ['touristicCityIndustryDescription'],
+                );
         }),
       ),
     );

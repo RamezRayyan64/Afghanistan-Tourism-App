@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
 // Touristic Cities List
-List<String> touristicCitiesList = [
-  'Herat',
-  'Ghazni',
-  'Kabul',
-];
+List<String> touristicCitiesList = [];
 
 // Drawer Items List
 List<Map<String, dynamic>> dashboardDrawerItemsList = [
@@ -41,50 +37,14 @@ List<Map<String, dynamic>> appDrawerItemsList = [
 ];
 
 // Touristic City List
-List<Map<String, dynamic>> touristicCityPlaceItemsList = [
-  {
-    'place_image_url': 'assets/cities/herat.jpg',
-    'place_name': 'Great Mosque',
-    'place_location': 'Sultan Ghiyasuddin Ghori',
-    'place_star_rating_description': 'Excellent',
-  },
-];
-List<Map<String, dynamic>> touristicCityIndustryItemsList = [
-  {
-    'image_url': 'assets/cities/herat.jpg',
-    'name': 'Afghan Fayzi Factory',
-    'description': 'Production of more than 80 types of colors.',
-  },
-  {
-    'image_url': 'assets/cities/herat.jpg',
-    'name': 'Afghan Fayzi Factory',
-    'description': 'Production of more than 80 types of colors.',
-  },
-  {
-    'image_url': 'assets/cities/herat.jpg',
-    'name': 'Afghan Fayzi Factory',
-    'description': 'Production of more than 80 types of colors.',
-  },
-];
-List<Map<String, dynamic>> touristicCityFestivalsItemsList = [
-  {
-    'image_url': 'assets/cities/herat.jpg',
-    'name': 'Afghan Fayzi Factory',
-    'description': 'Production of more than 80 types of colors.',
-  },
-  {
-    'image_url': 'assets/cities/herat.jpg',
-    'name': 'Afghan Fayzi Factory',
-    'description': 'Production of more than 80 types of colors.',
-  },
-];
-List<Map<String, dynamic>> touristicCityLocalFoodsItemsList = [
-  {
-    'image_url': 'assets/cities/herat.jpg',
-    'name': 'Afghan Fayzi Factory',
-    'description': 'Production of more than 80 types of colors.',
-  },
-];
+List touristicCityAboutTextItemsList = [];
+List touristicCityAboutGallaryItemsList = [];
+List touristicCityAboutNotablePeopleItemsList = [];
+List touristicCityAboutDistrictItemsList = [];
+List touristicCityPlaceItemsList = [];
+List touristicCityIndustryItemsList = [];
+List touristicCityFestivalsItemsList = [];
+List touristicCityLocalFoodsItemsList = [];
 
 // Languages List
 List<Map<String, dynamic>> languageItemsList = [

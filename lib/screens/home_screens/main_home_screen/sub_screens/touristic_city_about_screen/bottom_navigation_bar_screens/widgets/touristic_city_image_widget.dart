@@ -14,8 +14,12 @@ class TouristicCityImageWidget extends StatelessWidget {
       padding: const EdgeInsets.all(5.0),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
-        child: Image(
-          image: AssetImage(imageUrl),
+        child: SizedBox(
+          width: double.infinity,
+          child: Image(
+            image: NetworkImage(imageUrl),
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );

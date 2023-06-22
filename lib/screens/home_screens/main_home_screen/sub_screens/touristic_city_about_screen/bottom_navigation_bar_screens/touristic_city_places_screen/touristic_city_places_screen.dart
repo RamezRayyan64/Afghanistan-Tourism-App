@@ -5,7 +5,7 @@ class TouristicCityPlacesScreen extends StatelessWidget {
   const TouristicCityPlacesScreen(
       {super.key, required this.touristicCityPlaceItemsList});
 
-  final List<Map<String, dynamic>> touristicCityPlaceItemsList;
+  final List touristicCityPlaceItemsList;
 
   @override
   Widget build(BuildContext context) {
@@ -14,14 +14,18 @@ class TouristicCityPlacesScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: List.generate(touristicCityPlaceItemsList.length, (index) {
-          return TouristicCityPlaceItemWidget(
-            placeImageUrl: touristicCityPlaceItemsList[index]
-                ['place_image_url'],
-            placeName: touristicCityPlaceItemsList[index]['place_name'],
-            placeLocation: touristicCityPlaceItemsList[index]['place_location'],
-            placeStarRatingDescription: touristicCityPlaceItemsList[index]
-                ['place_star_rating_description'],
-          );
+          return touristicCityPlaceItemsList[index] == null
+              ? const SizedBox()
+              : TouristicCityPlaceItemWidget(
+                  placeImageUrl: touristicCityPlaceItemsList[index]
+                      ['touristicCityPlaceImage'],
+                  placeName: touristicCityPlaceItemsList[index]
+                      ['touristicCityPlaceName'],
+                  placeLocation: touristicCityPlaceItemsList[index]
+                      ['touristicCityPlaceLocation'],
+                  placeStarRatingDescription: touristicCityPlaceItemsList[index]
+                      ['touristicCityPlaceRatingStar'],
+                );
         }),
       ),
     );

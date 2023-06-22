@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "261600123159",
+    "firebase_url": "https://afghannistan-tourism-app-default-rtdb.firebaseio.com",
+    "project_id": "afghannistan-tourism-app",
+    "storage_bucket": "afghannistan-tourism-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261600123159:android:248aeb198c6890fb7eff52",
+        "android_client_info": {
+          "package_name": "com.herat.university.afghanistan_tourism_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261600123159-b2j89ggaa1egbntossift4dnrvjrivma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeKF72KkJ8fFCt0FcCcmlfFesZWXE7DiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261600123159-b2j89ggaa1egbntossift4dnrvjrivma.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "261600123159-ded1e00gb43n0ri38p0533532dokh3m9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zohal.afghanistantourism"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261600123159:android:979da1d8b28fe00a7eff52",
+        "android_client_info": {
+          "package_name": "com.zohal.afghanistantourism"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261600123159-bo99l42hna88ib9uvfp8feh5qf23tu5m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zohal.afghanistantourism",
+            "certificate_hash": "8ac1d775ef61efe6e0b57ce0001480f4c6e07c45"
+          }
+        },
+        {
+          "client_id": "261600123159-b2j89ggaa1egbntossift4dnrvjrivma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeKF72KkJ8fFCt0FcCcmlfFesZWXE7DiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261600123159-b2j89ggaa1egbntossift4dnrvjrivma.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "261600123159-ded1e00gb43n0ri38p0533532dokh3m9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zohal.afghanistantourism"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261600123159:android:e0516b8e72127af17eff52",
+        "android_client_info": {
+          "package_name": "com.zohal.afghanistantourism.adminpanel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261600123159-b2j89ggaa1egbntossift4dnrvjrivma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeKF72KkJ8fFCt0FcCcmlfFesZWXE7DiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261600123159-b2j89ggaa1egbntossift4dnrvjrivma.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "261600123159-ded1e00gb43n0ri38p0533532dokh3m9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zohal.afghanistantourism"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

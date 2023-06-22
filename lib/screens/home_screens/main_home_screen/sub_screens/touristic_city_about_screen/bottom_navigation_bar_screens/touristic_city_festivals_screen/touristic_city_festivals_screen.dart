@@ -5,7 +5,7 @@ class TouristicCityFestivalsScreen extends StatelessWidget {
   const TouristicCityFestivalsScreen(
       {super.key, required this.touristicCityFestivalItemsList});
 
-  final List<Map<String, dynamic>> touristicCityFestivalItemsList;
+  final List touristicCityFestivalItemsList;
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +14,16 @@ class TouristicCityFestivalsScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: List.generate(touristicCityFestivalItemsList.length, (index) {
-          return TouristicCityItemWidget(
-            imageUrl: touristicCityFestivalItemsList[index]['image_url'],
-            name: touristicCityFestivalItemsList[index]['name'],
-            description: touristicCityFestivalItemsList[index]['description'],
-          );
+          return touristicCityFestivalItemsList[index] == null
+              ? const SizedBox()
+              : TouristicCityItemWidget(
+                  imageUrl: touristicCityFestivalItemsList[index]
+                      ['touristicCityFestivalImage'],
+                  name: touristicCityFestivalItemsList[index]
+                      ['touristicCityFestivalTitle'],
+                  description: touristicCityFestivalItemsList[index]
+                      ['touristicCityFestivalDescription'],
+                );
         }),
       ),
     );

@@ -1,5 +1,5 @@
-import 'package:afghanistantourism/screens/home_screens/main_home_screen/sub_screens/drawer_screens/widgets/custom_elevated_button_widget.dart';
-import 'package:afghanistantourism/screens/home_screens/main_home_screen/sub_screens/drawer_screens/widgets/custom_text_field_widget.dart';
+import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/sub_screens/drawer_screens/widgets/custom_elevated_button_widget.dart';
+import 'package:afghanistan_tourism_app/screens/home_screens/main_home_screen/sub_screens/drawer_screens/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
 
 class ContactUsTextFieldsAndButtonColumnWidget extends StatelessWidget {
